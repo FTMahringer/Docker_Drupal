@@ -34,10 +34,14 @@ You can access the phpmyadmin at `http://localhost:8081`.
 
 ### Configuration
 The following environment variables are used in the Docker setup:
+- PHPmyadmin user: root
+- PHPmyadmin password: drupal_root
+
 - DRUPAL_DB_USER: root
 - DRUPAL_DB_PASSWORD: drupal_root
 - DRUPAL_DB_HOST: mariadb
 - Drupal User Credentials
+
 - Username: admin
 - Password: admin
 
