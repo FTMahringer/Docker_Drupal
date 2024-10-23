@@ -84,5 +84,9 @@ to copy the container files into a local folder use:
 ```sh
 docker cp (your Drupal container ID)/opt/drupal/ ./drupalData
 ```
+The command looks lke this:
+
+![image](https://github.com/user-attachments/assets/2d64ea6a-a4ca-4ceb-adc4-6ea210d2dfb9)
+
 
 now you can change back to the "original docker-compose" if you dont do that, then the local files will be ignored.
