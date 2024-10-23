@@ -1,0 +1,42 @@
+version: '3'
+services:
+  drupal:
+    image: drupal:10-apache
+    volumes:
+      - ./drupalData/web:/var/www/html
+    ports:
+      - 8080:80
+    environment:
+      - DRUPAL_DB_HOST=mariadb
+      - DRUPAL_DB_PORT=3306
+      - DRUPAL_DB_NAME=drupal
+      - DRUPAL_DB_USER=drupal
+      - DRUPAL_DB_PASSWORD=drupal
+    restart: always
+    depends_on:
+      - mariadb
+      
+  mariadb:
+    image: mariadb:latest
+    ports:
+      - "4306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: drupal_root
+      MYSQL_DATABASE: drupal
+      MYSQL_USER: drupal
+      MYSQL_PASSWORD: drupal
+    volumes:
+      - ./data:/var/lib/mysql
+    restart: always
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mariadb
+      PMA_USER: root
+      PMA_PASSWORD: drupal_root
+    depends_on:
+      - mariadb
+    restart: always
