@@ -76,6 +76,7 @@ docker ps
 there the CONTAINER IDs are displayed (they are what we want)
 
 it looks like this:
+
 ![image](https://github.com/user-attachments/assets/e31b8c9b-7b62-4881-a236-d610e57c57c7)
 
 
