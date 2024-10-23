@@ -13,7 +13,7 @@ This repository contains the Docker setup for running a Drupal instance. It incl
 
 ### Clone the Repository
 ```sh
-git clone https://github.com/FTMahringer/SAMC_Drupal-Docker.git
+git clone https://github.com/FTMahringer/Docker_Drupal.git
 cd SAMC_Drupal-Docker
 ```
 
