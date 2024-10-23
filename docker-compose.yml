@@ -4,6 +4,9 @@ services:
     image: drupal:10-apache
     volumes:
       - ./drupalData/web:/var/www/html
+    # alternate volume for when the above not working
+    #volumes:
+      #- /var/www/html
     ports:
       - 8080:80
     environment:
