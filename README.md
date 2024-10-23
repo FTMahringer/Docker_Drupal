@@ -65,9 +65,10 @@ This is a part from the `docker-compose.yml`, the drupal volume:
       #- /var/www/html
 ```
 If the "normal" way doenst work for you:
-1. use the outcommented part and comment out the normal volume.
-2. Build and start like normal
-3. In the terminal, you can use this command, to get the drupal files from the container to a local:
+1. Delete the drupaldata folder, that comes with the repo.
+2. use the outcommented part and comment out the normal volume.
+3. Build and start like normal
+4. In the terminal, you can use this command, to get the drupal files from the container to a local:
 
 To Display all containers:
 ```sh
@@ -88,5 +89,6 @@ The command looks lke this:
 
 ![image](https://github.com/user-attachments/assets/2d64ea6a-a4ca-4ceb-adc4-6ea210d2dfb9)
 
+5. When that is done, go back to how the docker-compose was in its original state (if you do not, your local files will be ignored)
 
-now you can change back to the "original docker-compose" if you dont do that, then the local files will be ignored.
+Hope this works for you.
