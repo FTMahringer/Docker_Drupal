@@ -56,8 +56,17 @@ For any inquiries, please contact [FTMahringer](https://github.com/FTMahringer).
 
 If this doesnt work for you, you can do also do it like this:
 
-1. Use the alternate docker-compose.yml
-2. Build and start like normal.
+This is a part from the `docker-compose.yml`, the drupal volume:
+```
+    volumes:
+      - ./drupalData/web:/var/www/html
+    # alternate volume for when the above not working
+    #volumes:
+      #- /var/www/html
+```
+If the "normal" way doenst work for you:
+1. use the outcommented part and comment out the normal volume.
+2. Build and start like normal
 3. In the terminal, you can use this command, to get the drupal files from the container to a local:
 
 To Display all containers:
@@ -66,9 +75,13 @@ docker ps
 ```
 there the CONTAINER IDs are displayed (they are what we want)
 
+it looks like this:
+![image](https://github.com/user-attachments/assets/e31b8c9b-7b62-4881-a236-d610e57c57c7)
+
+
 to copy the container files into a local folder use:
 ```sh
-docker cp (your Drupal container ID)/opt/Drupal/ (your folder where it should be f.e.)./drupalData
+docker cp (your Drupal container ID)/opt/drupal/ ./drupalData
 ```
 
 now you can change back to the "original docker-compose" if you dont do that, then the local files will be ignored.
