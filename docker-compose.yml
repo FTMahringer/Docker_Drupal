@@ -40,6 +40,9 @@ services:
       PMA_HOST: mariadb
       PMA_USER: root
       PMA_PASSWORD: drupal_root
+      PMA_PASSWORD: drupal_root
+      MEMORY_LIMIT: 256M
+      UPLOAD_LIMIT: 50M
     depends_on:
       - mariadb
     restart: always
