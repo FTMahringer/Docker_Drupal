@@ -1,4 +1,4 @@
-version: '3'
+---
 services:
   drupal:
     image: drupal:10-apache
@@ -39,7 +39,6 @@ services:
     environment:
       PMA_HOST: mariadb
       PMA_USER: root
-      PMA_PASSWORD: drupal_root
       PMA_PASSWORD: drupal_root
       MEMORY_LIMIT: 256M
       UPLOAD_LIMIT: 50M
